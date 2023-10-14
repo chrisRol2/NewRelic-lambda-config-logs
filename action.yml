@@ -1,5 +1,8 @@
 name: "New Relic Lambda Config Action"
 description: "GitHub Action to create a New Relic Lambda configuration using Docker"
+author: "Chris Rol"
+icon: "bookmark"
+color: "blue"
 runs:
   using: "docker"
   image: "docker://chrisrol/newrelic-lambda-config:v0.1"
