@@ -1,0 +1,24 @@
+name: "New Relic Lambda Config Action"
+description: "GitHub Action to create a New Relic Lambda configuration using Docker"
+runs:
+  using: "docker"
+  image: "docker://chrisrol/newrelic-lambda-config:v0.1"
+inputs:
+  AWS_DEFAULT_REGION:
+    description: "AWS Default Region"
+    required: true
+  AWS_ACCESS_KEY_ID:
+    description: "AWS Access Key ID"
+    required: true
+  AWS_SECRET_ACCESS_KEY:
+    description: "AWS Secret Access Key"
+    required: true
+  NR_API_KEY:
+    description: "New Relic API Key"
+    required: true
+  NR_ACCOUNT_ID:
+    description: "New Relic Account ID"
+    required: true
+  FUNCTION_NAME:
+    description: "Function Name"
+    required: true
