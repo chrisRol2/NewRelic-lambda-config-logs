@@ -11,6 +11,24 @@
  FUNCTION_NAME
 ```
 
+## Github Actions
+```
+Monitoring:
+    runs-on: ubuntu-latest
+    environment: development
+    needs: deploy
+    steps:
+      - name: Set up New Relic Lambda Configuration
+        uses: chrisRol2/NewRelic-lambda-config-logs@v0.1.2
+        with:
+          AWS_DEFAULT_REGION: us-east-1
+          AWS_ACCESS_KEY_ID: ${{ secrets.GH_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.GH_AWS_SECRET_ACCESS_KEY }}
+          NR_API_KEY: ${{ secrets.NEW_RELIC_API_KEY }}
+          NR_ACCOUNT_ID: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
+          FUNCTION_NAME: "FUNCTION_NAME"
+```
+
 ## How to run
 
 ```
